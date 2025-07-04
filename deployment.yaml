@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysharpapp
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysharpapp
+  template:
+    metadata:
+      labels:
+        app: mysharpapp
+    spec:
+      containers:
+        - name: mysharpapp
+          image: abraaar/mysharpapp:v1
+          ports:
+            - containerPort: 8080
