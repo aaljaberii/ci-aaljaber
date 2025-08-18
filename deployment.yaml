@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: mysharpapp
-          image: abraaar/mysharpapp:v1
+          image: abraaar/mysharpapp:v2
           ports:
             - containerPort: 80
